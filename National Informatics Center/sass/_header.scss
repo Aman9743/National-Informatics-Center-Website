@@ -1,0 +1,253 @@
+.header {
+  background-image: url("../img/hero_bg.svg");
+  background-size: cover;
+
+  // background-color: $color-blue-dark-1;
+  // @media only screen and (max-width: $bp-smaller) {
+  //   margin-bottom: -18rem;
+  // }
+
+  &__nav {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @media only screen and (max-width: $bp-smaller) {
+      width: 70%;
+      padding: 0.5rem 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 90%;
+      padding: 0.5rem 1rem;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &-list-item {
+      list-style: none;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+    }
+
+    &-list-link:link,
+    &-list-link:visited {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      position: relative;
+
+      //   @media only screen and (max-width: $bp-large) {
+      //     font-size: 80%;
+      //   }
+    }
+    &-list-link:hover,
+    &-list-link:active {
+      &::after {
+        content: "";
+        height: 6px;
+        width: 6px;
+        background-color: $color-white;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+      }
+    }
+  }
+}
+.heading-1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  color: $color-white;
+  @media only screen and (max-width: 22em) {
+    font-size: 3.5rem;
+  }
+}
+.hero {
+  display: flex;
+  width: 70%;
+  margin: 10rem auto 5rem auto;
+  padding-bottom: 8rem;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 65em) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 42em) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 30.5em) {
+    width: 100%;
+  }
+
+  /////////////////
+  // styling hero text part
+
+  &_text {
+    width: 70%;
+    margin-top: -5rem;
+  }
+  &_text {
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 6rem;
+    }
+  }
+  &_para {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $color-white;
+    // line-height: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  &_in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    @media only screen and (max-width: 74em) {
+      width: 75%;
+    }
+    @media only screen and (max-width: 65em) {
+      width: 45%;
+    }
+    @media only screen and (max-width: 58em) {
+      width: 55%;
+    }
+    @media only screen and (max-width: 48em) {
+      width: 65%;
+    }
+    @media only screen and (max-width: 26.25em) {
+      width: 80%;
+    }
+    @media only screen and (max-width: 22em) {
+      //350px
+      width: 90%;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+      color: $color-white;
+    }
+    &-btn {
+      font-size: 1.3rem;
+      color: $color-blue-dark-2;
+      font-weight: 600;
+      padding: 0.8rem 1.7rem;
+      border: none;
+      border-radius: 5px;
+    }
+    &-play {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &_out {
+    display: flex;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    @media only screen and (max-width: 74em) {
+      width: 95%;
+    }
+    @media only screen and (max-width: 65em) {
+      width: 60%;
+    }
+    @media only screen and (max-width: 58em) {
+      width: 70%;
+    }
+    @media only screen and (max-width: 48em) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 26.25em) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 22em) {
+      width: 110%;
+    }
+
+    &-item {
+      line-height: 2rem;
+      position: relative;
+
+      &:not(:last-child):after {
+        position: absolute;
+        content: " ";
+        height: 4rem;
+        width: 0.2rem;
+        background-color: $color-grey-light-3;
+        right: -10%;
+        top: 0;
+        align-items: center;
+        // margin-left: 1rem;
+      }
+    }
+
+    &-number {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+    &-text {
+      font-size: 1.5rem;
+      color: $color-white;
+    }
+    &-line {
+      height: 30px;
+
+      //   color: $color-grey-light-3;
+    }
+  }
+
+  ///////
+  //styling hero image
+  &_imgbox {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 65em) {
+      justify-content: center;
+    }
+  }
+
+  &_img {
+    width: 90%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 70%;
+    }
+  }
+}
+.btn-scroll {
+  font-size: 3rem;
+  width: 3.4rem;
+  height: 3rem;
+
+  background-color: $color-blue-dark-2;
+  position: fixed;
+  top: 85%;
+  right: 4%;
+  border: none;
+  border-radius: 5px;
+}
+.btn-ancr {
+  color: $color-white;
+}

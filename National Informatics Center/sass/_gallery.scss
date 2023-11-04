@@ -1,0 +1,40 @@
+.gallery {
+  width: 70%;
+  margin: 10rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: 59em) {
+    width: 80%;
+  }
+
+  &-in {
+    width: 90%;
+    display: flex;
+    overflow: auto;
+  }
+
+  &_img {
+    width: 14rem;
+    margin: 0.8rem 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.icon_left {
+  width: 1.5rem;
+}
+.icon_right {
+  width: 1.5rem;
+}
+.btn-right {
+  border: none;
+  background: none;
+}
+.btn-left {
+  border: none;
+  background: none;
+}

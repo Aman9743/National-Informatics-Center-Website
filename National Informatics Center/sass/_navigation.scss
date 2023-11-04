@@ -1,0 +1,16 @@
+.navigations {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+
+  @media only screen and (max-width: 56.5em) {
+    justify-content: space-between;
+  }
+  &_img {
+    padding: 1rem 2rem;
+
+    @media only screen and (max-width: 56.5em) {
+      width: 30%;
+    }
+  }
+}
